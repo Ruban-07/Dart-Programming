@@ -90,9 +90,13 @@ To Install Dart - https://medium.com/yavar/dart-bc897f1df1dd
 
 ```Dart
 dart create -t console-full console_full-project
+```
 
+```Dart
 cd console_full-project
+```
 
+```Dart
 dart run
 ```
 
@@ -123,7 +127,34 @@ devtools
 5. Copy the VM service is listening on [...url...] and paste it on the `devtools`.
 
 6. Connect the url to the `devtools`.
+
    ![devtools](devtools.png)
+
+## Exploring dart project files and packages :
+
+![config](config.png)
+
+## Dart Package :
+
+The dart package is the main component of dart ecosystem, there is a place, where all dart developer were publish their dart packages called `pub.dev`.
+
+The main use of packages is to '**Retrieve data from an API**', '**Parse the JSON inside the APP**', and '**Store the data to a local Database**'.
+
+We can also use already existing packages, each packages have an different features.
+
+### http Package :
+
+![http](http.png)
+A composable, Future-based library for making HTTP requests.It mainly used to retrieve data from an API by using this package.
+
+### json_serializable package :
+
+![json](json.png)
+It Provides Dart Build System builders for handling JSON. It is mainly used to Parse the JSON inside the APP.
+
+### hive package :
+
+![hive](https://raw.githubusercontent.com/hivedb/hive/master/.github/logo_transparent.svg?sanitize=true)
 
 ## Dart VM can Execute Dart apps in 2 ways :
 
