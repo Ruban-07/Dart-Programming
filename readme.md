@@ -1,15 +1,17 @@
 ![Dart](dart.gif)
 
-# `Dart Programming Language`
+# Dart Programming Language
 
 Dart is a client-optimized language for developing fast apps on any platform. Its goal is to offer the most productive programming language for multi-platform development, paired with a flexible execution runtime platform for app frameworks.
 
-## `What is Dart ?`
+#
+
+## What is Dart ?
 
 ![dart-arrow](dart-arrow.png)
 A 'player' can throw this "dart arrow" to the 'dart board' during 'dart game'. We think of the dart arrow as being the Dart language, the dart player as the Dart Developer, and the dart board as being the entire eco-system of the dart based apps.
 
-### `Dart Arrow:`
+### Dart Arrow:
 
 - `Precision -` Language has to be as optimised as possible.
 
@@ -24,28 +26,40 @@ A 'player' can throw this "dart arrow" to the 'dart board' during 'dart game'. W
 These are the core features of Dart programming language.
 Str
 
-## `Type Safe Language :`
+#
+
+## Type Safe Language :
 
 Dart is a Type Safe Language, the only operations that can performed on data in the language, are those allowed by type of the data. For example if we've an variable `int x` is not allowed to perform the `String Operations` like `toUpperCase() or toLowerCase()`, since the `String` types doesn't support `integer operations`.
 
-## `Sound Type System :`
+#
+
+## Sound Type System :
 
 The Sound type system won't allow the code to run into undefined states, but exactly it is called as `SOUND`.
 The Dart having the both `Static Type Check` and `Runtime Check`. These are mainly used to find the error in the code or error in the time of compilation.
 
-## `Dynamic Type :`
+#
+
+## Dynamic Type :
 
 Whenever we use `dynamic`type the static analyzer won't care about that data anymore.
 
-## `Type inference :`
+#
+
+## Type inference :
 
 Types are Mandatory but don't have to be annotated, because dart can INFER TYPES by using the `var` keyword. When we assign a value to an variable with `var` keyword, it automatically assign the type also.
 
-## `Var vs Dynamic :`
+#
+
+## Var vs Dynamic :
 
 ![vs](vs.png)
 
-## `Sound Null Safety :
+#
+
+## Sound Null Safety :
 
 Variables can't contain `NULL`, unless you say they can. If the dart variable is NON-NULLABLE that variable will always be NON-NULLABLE. NON-NULLABILITY is retained at RUNTIME!. Null Safety is really important in dart programmin
 
@@ -53,10 +67,14 @@ Variables can't contain `NULL`, unless you say they can. If the dart variable is
 
 ![jit](jit.png)
 
-## `Dart SDK :`
+#
+
+## Dart SDK :
 
 The Dart SDK has the libraries and command-line tools that you need to develop Dart web, command-line, and server apps. To get the Dart SDK, see Get Dart. If you're developing Flutter apps, then you don't need to separately download the Dart SDK; just install Flutter.
 ![sdk](sdk.png)
+
+#
 
 ## Installation
 
@@ -66,7 +84,48 @@ To Install Dart - https://medium.com/yavar/dart-bc897f1df1dd
 
 ![process](pro.png)
 
-Dart VM can Execute Dart apps in 2 ways :
+#
+
+## To Create Dart console template :
+
+```Dart
+dart create -t console-full console_full-project
+
+cd console_full-project
+
+dart run
+```
+
+The Dart compile will compiler the dart file, which is inside the bin folder.
+
+## Installing Devtols :
+
+1. Run the command :
+
+```Dart
+dart pub global activate devtools
+```
+
+2. Add the file path in Environment variables.
+
+3. Then run the command :
+
+```Dart
+dart run --observe --pause-isolates-on-start
+```
+
+4. Open a new terminal and run the command given below, once you run the command the `devtools` will open on your browser.
+
+```Dart
+devtools
+```
+
+5. Copy the VM service is listening on [...url...] and paste it on the `devtools`.
+
+6. Connect the url to the `devtools`.
+   ![devtools](devtools.png)
+
+## Dart VM can Execute Dart apps in 2 ways :
 
 1. From Source by using JIT/AOT Compiler
 2. From Snapshots(jit, aot or kernal snapshots).
