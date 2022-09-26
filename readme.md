@@ -9,6 +9,7 @@ Dart is a client-optimized language for developing fast apps on any platform. It
 ## What is Dart ?
 
 ![dart-arrow](dart-arrow.png)
+
 A 'player' can throw this "dart arrow" to the 'dart board' during 'dart game'. We think of the dart arrow as being the Dart language, the dart player as the Dart Developer, and the dart board as being the entire eco-system of the dart based apps.
 
 ### Dart Arrow:
@@ -72,6 +73,7 @@ Variables can't contain `NULL`, unless you say they can. If the dart variable is
 ## Dart SDK :
 
 The Dart SDK has the libraries and command-line tools that you need to develop Dart web, command-line, and server apps. To get the Dart SDK, see Get Dart. If you're developing Flutter apps, then you don't need to separately download the Dart SDK; just install Flutter.
+
 ![sdk](sdk.png)
 
 #
@@ -145,16 +147,20 @@ We can also use already existing packages, each packages have an different featu
 ### http Package :
 
 ![http](http.png)
+
 A composable, Future-based library for making HTTP requests.It mainly used to retrieve data from an API by using this package.
 
 ### json_serializable package :
 
 ![json](json.png)
+
 It Provides Dart Build System builders for handling JSON. It is mainly used to Parse the JSON inside the APP.
 
 ### hive package :
 
 ![hive](https://raw.githubusercontent.com/hivedb/hive/master/.github/logo_transparent.svg?sanitize=true)
+
+Hive is a lightweight and blazing fast key-value database written in pure Dart. It is mainly used to store the data to a local Database.
 
 ## Dart VM can Execute Dart apps in 2 ways :
 
