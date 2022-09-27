@@ -7,6 +7,7 @@ Application development is the process of creating a computer program or a set o
 # Mobile App Development
 
 ![mob](mob-app.png)
+
 Mobile application development is the process of creating software applications that run on a mobile device, and a typical mobile application utilizes a network connection to work with remote computing resources.
 
 #
