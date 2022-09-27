@@ -8,29 +8,39 @@ Application development is the process of creating a computer program or a set o
 
 ![mob](mob-app.png)
 Mobile application development is the process of creating software applications that run on a mobile device, and a typical mobile application utilizes a network connection to work with remote computing resources.
+
 #
+
 ## Types of App Development :
 
 1. Native Application Development.
 2. Web based Application Development.
 3. Hybrid Application Development.
+
 #
+
 ## Native Application Development :
 
 ![native](https://www.mindinventory.com/blog/wp-content/uploads/2019/09/native-app-development.png)
 
 Native Application are designed to run an particular platform such as Andriod, Windows or ios.
+
 #
+
 ## Web based Application Development :
 
 ![web](https://static.javatpoint.com/blog/images/web-application.png)
 Web based applications are written in HTML, CSS, JAVASCRIPT. To use this application you’ll need internet connection.
+
 #
+
 ## Hybrid App Development :
 
 ![hybrid](https://codersera.com/blog/wp-content/uploads/2020/07/hybrid-mobile-app-development.jpg)
 Hybrid application is a combination of both Native and Web-based Applications.
+
 #
+
 ![Dart](dart.gif)
 
 # Dart Programming Language
@@ -70,8 +80,9 @@ Dart is a Type Safe Language, the only operations that can performed on data in 
 
 ## Sound Type System :
 
-The Sound type system won't allow the code to run into undefined states, but exactly it is called as `SOUND`.
-The Dart having the both `Static Type Check` and `Runtime Check`. These are mainly used to find the error in the code or error in the time of compilation.
+- The Sound type system won't allow the code to run into undefined states, but exactly it is called as `SOUND`.
+
+- The Dart having the both `Static Type Check` and `Runtime Check`. These are mainly used to find the error in the code or error in the time of compilation.
 
 #
 
@@ -97,11 +108,41 @@ Types are Mandatory but don't have to be annotated, because dart can INFER TYPES
 
 Variables can't contain `NULL`, unless you say they can. If the dart variable is NON-NULLABLE that variable will always be NON-NULLABLE. NON-NULLABILITY is retained at RUNTIME!. Null Safety is really important in dart programmin
 
+#
+
+## Dart compiler :
+
+The Dart Compiler is a compiler which is a tool that converts the source code you wrote in dart language into other intermediate languages or machine code that ca n run on a specific platform in dart virtual machine. However dart uses different compilers for different jobs.
+
 ![dev](dev.png)
 
 ![jit](jit.png)
 
-#
+During the project there should be two phases :
+
+1. Development Phase.
+
+2. Production Phase.
+
+## JIT Compiler :
+
+- JIT, which stands for Just In Time Compiler. Just In Time Compiler as its name is implying compiles just the amount of code it needs.
+
+- For example : If our project having 10,000 lines of code, it won't compile enitire code, it only compile the required set of code.
+
+- JIT also comes with an incremental recompilation.
+
+- Jit does not transform the dart code into machine code, but rather into an intermediatary language (For Faster Development Cycles).
+
+- The JIT was mainly designed for Development Phase.
+
+## AOT Compiler:
+
+- AOT, Which stands for Ahead of Time Compiler.
+
+- The Ahead of Time Compiler, compiles entire source code into a machine code supported natively by the platform.
+
+- The AOT compiler is mainly designed for Production Phase.
 
 ## Dart SDK :
 
@@ -137,6 +178,8 @@ dart run
 
 The Dart compile will compiler the dart file, which is inside the bin folder.
 
+#
+
 ## Installing Devtols :
 
 1. Run the command :
@@ -165,17 +208,25 @@ devtools
 
    ![devtools](devtools.png)
 
+#
+
 ## Exploring dart project files and packages :
 
 ![config](config.png)
 
+#
+
 ## Dart Package :
 
-The dart package is the main component of dart ecosystem, there is a place, where all dart developer were publish their dart packages called `pub.dev`.
+- The dart package is the main component of dart ecosystem, there is a place, where all dart developer were publish their dart packages called `pub.dev`.
 
-The main use of packages is to '**Retrieve data from an API**', '**Parse the JSON inside the APP**', and '**Store the data to a local Database**'.
+- The main use of packages is to '**Retrieve data from an API**', '**Parse the JSON inside the APP**', and '**Store the data to a local Database**'.
 
-We can also use already existing packages, each packages have an different features.
+- We can also use already existing packages, each packages have an different features.
+
+- Our dart project is a standalone dart package.
+
+#
 
 ### http Package :
 
@@ -183,17 +234,63 @@ We can also use already existing packages, each packages have an different featu
 
 A composable, Future-based library for making HTTP requests.It mainly used to retrieve data from an API by using this package.
 
+#
+
 ### json_serializable package :
 
 ![json](json.png)
 
 It Provides Dart Build System builders for handling JSON. It is mainly used to Parse the JSON inside the APP.
 
+#
+
 ### hive package :
 
 ![hive](https://raw.githubusercontent.com/hivedb/hive/master/.github/logo_transparent.svg?sanitize=true)
 
 Hive is a lightweight and blazing fast key-value database written in pure Dart. It is mainly used to store the data to a local Database.
+
+#
+
+## Application and Library package :
+
+The Package that won't be uploaded in the `pub.dev` is known as `Application package` and the package that will be uploaded into `pub.dev` is known as `Library package`.
+
+#
+
+## Package and Library :
+
+- The Relationship between package and library is that the package can contain one or multiple libraries.
+
+- The Libraries are the only part that is publicaly accessible to everyone.
+
+#
+
+## Dart Linting :
+
+The Dart Linter package defines lint rules that identify and report on `lints` found in Dart code. Linting is performed by the Dart analysis server and the dart analyze command in the Dart command-line tool.
+
+#
+
+## Dart Tests :
+
+- The Dart Tests represents the one of the pillars that add a lot of value onto the development and maintaince aspects of a project
+
+- They are the pieces of code that we write in order to make sure the features and implementatoions
+
+- We coded behave and output things as expected ideally for every features or added functionallity we should test checking if it's working good or not in dart test are written inside the test folder in files appending underscore.test at the end in pour case, we have a test verifying if the putput of the caculate function is really expected number of 42.
+
+- This is called a unit test adn the simplest test we can write but how do we run it as you have probably guessed by now you can do it from inside the editor or from inside the dart cli.
+
+- Inside the editor we actually have a dedicated panel we can go to called testing at the top we have multiple button to run the tests.
+
+- Inside the `dart cli` run a command `dart test` to run full tests.
+
+#
+
+# Dart Application in Depth :
+
+![depth](main.png)
 
 ## Dart VM can Execute Dart apps in 2 ways :
 
