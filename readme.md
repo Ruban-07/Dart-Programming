@@ -7,6 +7,7 @@ Application development is the process of creating a computer program or a set o
 # Mobile App Development
 
 ![mob](mob-app.png)
+
 Mobile application development is the process of creating software applications that run on a mobile device, and a typical mobile application utilizes a network connection to work with remote computing resources.
 
 #
@@ -72,78 +73,6 @@ Str
 
 #
 
-## Type Safe Language :
-
-Dart is a Type Safe Language, the only operations that can performed on data in the language, are those allowed by type of the data. For example if we've an variable `int x` is not allowed to perform the `String Operations` like `toUpperCase() or toLowerCase()`, since the `String` types doesn't support `integer operations`.
-
-#
-
-## Sound Type System :
-
-- The Sound type system won't allow the code to run into undefined states, but exactly it is called as `SOUND`.
-
-- The Dart having the both `Static Type Check` and `Runtime Check`. These are mainly used to find the error in the code or error in the time of compilation.
-
-#
-
-## Dynamic Type :
-
-Whenever we use `dynamic`type the static analyzer won't care about that data anymore.
-
-#
-
-## Type inference :
-
-Types are Mandatory but don't have to be annotated, because dart can INFER TYPES by using the `var` keyword. When we assign a value to an variable with `var` keyword, it automatically assign the type also.
-
-#
-
-## Var vs Dynamic :
-
-![vs](vs.png)
-
-#
-
-## Sound Null Safety :
-
-Variables can't contain `NULL`, unless you say they can. If the dart variable is NON-NULLABLE that variable will always be NON-NULLABLE. NON-NULLABILITY is retained at RUNTIME!. Null Safety is really important in dart programmin
-
-#
-
-## Dart compiler :
-
-The Dart Compiler is a compiler which is a tool that converts the source code you wrote in dart language into other intermediate languages or machine code that ca n run on a specific platform in dart virtual machine. However dart uses different compilers for different jobs.
-
-![dev](dev.png)
-
-![jit](jit.png)
-
-During the project there should be two phases :
-
-1. Development Phase.
-
-2. Production Phase.
-
-## JIT Compiler :
-
-- JIT, which stands for Just In Time Compiler. Just In Time Compiler as its name is implying compiles just the amount of code it needs.
-
-- For example : If our project having 10,000 lines of code, it won't compile enitire code, it only compile the required set of code.
-
-- JIT also comes with an incremental recompilation.
-
-- Jit does not transform the dart code into machine code, but rather into an intermediatary language (For Faster Development Cycles).
-
-- The JIT was mainly designed for Development Phase.
-
-## AOT Compiler:
-
-- AOT, Which stands for Ahead of Time Compiler.
-
-- The Ahead of Time Compiler, compiles entire source code into a machine code supported natively by the platform.
-
-- The AOT compiler is mainly designed for Production Phase.
-
 ## Dart SDK :
 
 The Dart SDK has the libraries and command-line tools that you need to develop Dart web, command-line, and server apps. To get the Dart SDK, see Get Dart. If you're developing Flutter apps, then you don't need to separately download the Dart SDK; just install Flutter.
@@ -207,6 +136,90 @@ devtools
 6. Connect the url to the `devtools`.
 
    ![devtools](devtools.png)
+
+#
+
+## Type Safe Language :
+
+Dart is a Type Safe Language, the only operations that can performed on data in the language, are those allowed by type of the data. For example if we've an variable `int x` is not allowed to perform the `String Operations` like `toUpperCase() or toLowerCase()`, since the `String` types doesn't support `integer operations`.
+
+#
+
+## Sound Type System :
+
+- The Sound type system won't allow the code to run into undefined states, but exactly it is called as `SOUND`.
+
+- The Dart having the both `Static Type Check` and `Runtime Check`. These are mainly used to find the error in the code or error in the time of compilation.
+
+#
+
+## Dynamic Type :
+
+Whenever we use `dynamic`type the static analyzer won't care about that data anymore.
+
+#
+
+## Type inference :
+
+Types are Mandatory but don't have to be annotated, because dart can INFER TYPES by using the `var` keyword. When we assign a value to an variable with `var` keyword, it automatically assign the type also.
+
+#
+
+## Var vs Dynamic :
+
+![vs](vs.png)
+
+#
+
+## Sound Null Safety :
+
+Variables can't contain `NULL`, unless you say they can. If the dart variable is NON-NULLABLE that variable will always be NON-NULLABLE. NON-NULLABILITY is retained at RUNTIME!. Null Safety is really important in dart programmin
+
+#
+
+## Dart compiler :
+
+The Dart Compiler is a compiler which is a tool that converts the source code you wrote in dart language into other intermediate languages or machine code that ca n run on a specific platform in dart virtual machine. However dart uses different compilers for different jobs.
+
+![dev](dev.png)
+
+![jit](jit.png)
+
+During the project there should be two phases :
+
+1. Development Phase.
+
+2. Production Phase.
+
+#
+
+![full](full.png)
+
+![diff](diff.png)
+
+#
+
+## JIT Compiler :
+
+- JIT, which stands for Just In Time Compiler. Just In Time Compiler as its name is implying compiles just the amount of code it needs.
+
+- For example : If our project having 10,000 lines of code, it won't compile enitire code, it only compile the required set of code.
+
+- JIT also comes with an incremental recompilation.
+
+- Jit does not transform the dart code into machine code, but rather into an intermediatary language (For Faster Development Cycles).
+
+- The JIT was mainly designed for Development Phase.
+
+#
+
+## AOT Compiler:
+
+- AOT, Which stands for Ahead of Time Compiler.
+
+- The Ahead of Time Compiler, compiles entire source code into a machine code supported natively by the platform.
+
+- The AOT compiler is mainly designed for Production Phase.
 
 #
 
@@ -292,15 +305,67 @@ The Dart Linter package defines lint rules that identify and report on `lints` f
 
 ![depth](main.png)
 
-## Dart VM can Execute Dart apps in 2 ways :
+## How does Dart run a program ?
+
+### Dart VM :
+
+A Dart VM is a Virtual machine in a sense that it provides an execution environment for our Dart Programming Language.
+
+The Dart Apps, Programs, and Packages are run inside the Dart VM
+
+- The RUNTIME System.
+- Development Experience Components.
+  - Debugging.
+  - Hot Reload.
+- JIT & AOT Compilation Pipelines.
+
+![vm](process.png)
+
+#
+
+## Heap :
+
+- The Heap is the Garbage Collection managed memory storage for akk the objects allocated by the code running in the specific isolate, the garbage collector attemps to reclaim memory which was allocated by the program but it no longer referenced.
+
+- Each isolate has single mutator thread which executes but benifits from multiple helper threads which handle VM's internal tasks.
+
+### Dart VM can Execute Dart apps in 2 ways :
 
 1. From Source by using JIT/AOT Compiler
 2. From Snapshots(jit, aot or kernal snapshots).
+
+#
+
+## What happen when we running a source using JIt Compile or Typing `dart run` command:
+
+- The Dart VM doesn't have the ability to execute raw dart code, instead it expects some kernal binares also called dill files which contains serialized kernal abstract syntax tree as known as kernal ast. The kernal ast is actually based on this intermediatary language
+
+- The Dart Kernal is a small high-level intermediary language derived from dart Language.
+
+- The Task of translating dart souce code into kernal ast is handled by a dart package called the Common Frontend or CFE.
+
+- The process of the aot compilation does global static analysis called `Type Flow Analysis` or alos called `TFA`.
 
 ![cfd](cfd.png)
 
 ![bas](bas.png)
 
-![diff](diff.png)
+#
 
-![full](full.png)
+## Running the Dart code from a Snapshot :
+
+### Snapshots :
+
+A Dart snapshot is just a binary serialization of the token stream, generated from parsing the code. A snapshot is not a "snapshot of a running program", it's generated before the tokens are turned into machine code. So, no program state is captured in a snapshot.
+
+A Dart Snapshots contains an efficient representation of all those entities allocated on the dart `VM Heap`.
+
+Entities which are need to start an execution process.
+
+Currently there are three snapshot types :
+
+1.  JIT - Snapshot.
+
+2.  AOT - Snapshot.
+
+3.  Kernal - Snapshot.
