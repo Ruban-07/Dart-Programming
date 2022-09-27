@@ -293,11 +293,42 @@ The Dart Linter package defines lint rules that identify and report on `lints` f
 
 ![depth](main.png)
 
-## Dart VM can Execute Dart apps in 2 ways :
+## How does Dart run a program ?
+
+### Dart VM :
+
+A Dart VM is a Virtual machine in a sense that it provides an execution environment for our Dart Programming Language.
+
+The Dart Apps, Programs, and Packages are run inside the Dart VM
+
+- The RUNTIME System.
+- Development Experience Components.
+  - Debugging.
+  - Hot Reload.
+- JIT & AOT Compilation Pipelines.
+
+![vm](process.png)
+
+## Heap :
+
+- The Heap is the Garbage Collection managed memory storage for akk the objects allocated by the code running in the specific isolate, the garbage collector attemps to reclaim memory which was allocated by the program but it no longer referenced.
+
+- Each isolate has single mutator thread which executes but benifits from multiple helper threads which handle VM's internal tasks.
+
+### Dart VM can Execute Dart apps in 2 ways :
 
 1. From Source by using JIT/AOT Compiler
 2. From Snapshots(jit, aot or kernal snapshots).
 
+## What happen when we running a source using JIt Compile or Typing `dart run` command:
+
+The Dart VM doesn't have the ability to execute raw dart code, instead it expects some kernal binares also called dill files which contains serialized kernal abstract syntax tree as known as kernal ast. The kernal ast is actually based on this intermediatary language
+
+The Dart Kernal is a small high-level intermediary language derived from dart Language.
+
+The Task of translating dart souce code into kernal ast is handled by a dart package called the Common Frontend or CFE.
+
+The process of the aot compilation does global static analysis called `Type Flow Analysis` or alos called `TFA`.
 ![cfd](cfd.png)
 
 ![bas](bas.png)
