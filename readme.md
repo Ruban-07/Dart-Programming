@@ -1,3 +1,36 @@
+# App Development
+
+![app-dev](https://img.freepik.com/free-vector/app-development-banner_33099-1720.jpg?w=2000)
+
+Application development is the process of creating a computer program or a set of programs to perform the different tasks that a business requires. From calculating monthly expenses to scheduling sales reports, applications help businesses automate processes and increase efficiency.
+
+# Mobile App Development
+
+![mob](mob-app.png)
+Mobile application development is the process of creating software applications that run on a mobile device, and a typical mobile application utilizes a network connection to work with remote computing resources.
+#
+## Types of App Development :
+
+1. Native Application Development.
+2. Web based Application Development.
+3. Hybrid Application Development.
+#
+## Native Application Development :
+
+![native](https://www.mindinventory.com/blog/wp-content/uploads/2019/09/native-app-development.png)
+
+Native Application are designed to run an particular platform such as Andriod, Windows or ios.
+#
+## Web based Application Development :
+
+![web](https://static.javatpoint.com/blog/images/web-application.png)
+Web based applications are written in HTML, CSS, JAVASCRIPT. To use this application you’ll need internet connection.
+#
+## Hybrid App Development :
+
+![hybrid](https://codersera.com/blog/wp-content/uploads/2020/07/hybrid-mobile-app-development.jpg)
+Hybrid application is a combination of both Native and Web-based Applications.
+#
 ![Dart](dart.gif)
 
 # Dart Programming Language
