@@ -369,3 +369,42 @@ Currently there are three snapshot types :
 2.  AOT - Snapshot.
 
 3.  Kernal - Snapshot.
+
+## Kernal Snapshots :
+
+- In Kernal Snapshots, there is no parsed classes, functions.
+
+- No Architecture specific code.
+
+- It is portable around all architecture.
+
+- Dart VM will need to compile it from scratch.
+
+## Publish package :
+
+1. Create an `pubspec.yaml` file.
+
+2. And then add name and environment there.
+
+3. Then run a command:
+
+```git
+dart pub get
+```
+
+Then it automatically create some files.
+
+There some protocol to publish packages in `pub.dev`.
+
+![pub](pub-pack.png)
+
+There two types of Dependencies :
+
+1. Regular Dependencies.
+
+   In Regular dependencies we'll use in the both Development phase and Production phase.
+
+2. Dev Dependencies.
+   In Dev Dependencies it only used in the Development phase and ignore in the production phase.
+
+   
