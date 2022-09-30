@@ -1,0 +1,7 @@
+name: "dart_package"
+environment:
+  sdk: ">=2.10.0 <3.0.0"
+
+dependencies:
+  calculator:
+    path: "packages/calculator"
