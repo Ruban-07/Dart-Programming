@@ -407,4 +407,294 @@ There two types of Dependencies :
 2. Dev Dependencies.
    In Dev Dependencies it only used in the Development phase and ignore in the production phase.
 
-   
+## Sound Null Safety :
+
+![sound](sound.png)
+
+The Dart language comes with sound null safety. Null safety prevents errors that result from unintentional access of variables set to null.
+
+For example, if a method expects an integer but receives null , your app causes a runtime error. This type of error, a null dereference error, can be difficult to debug.
+
+## Null Safety Changes:
+
+Types in your code are non-nullable by default.
+= variable can't conatin null, unless you say they can.
+
+Runtime null errors turn into edit-time analysis errors
+= fasted way to observe and fix any issues.
+
+Null Safety's goal is not a eliminate the null from the equation
+
+- Null will still exist in every dart program
+- Null highlights the "Absence" of the value.
+- The issuse is not null itself, but rather having null where you don't expect it!
+- Null Safety's goal is to have a control into where, how and when null can flow through your program.
+- Types are mage Nullable by postfixing them with the question mark (?)
+  - For Example : String ?, int ?, double ?, num ?, List<int ?>
+- Implicit Downcasts got removed.
+- You can't access the base type props or methods with its nullable type
+- The only props available for nullable types are toString(), == & hashCode
+  In null safety, an object of any type is of type Object?
+- The Never type was added a the bottom of the type tree and can be used to intterupt the flow of an application, by throwing an Exception
+- Non-void non-Nullable functions must always return the correct non-nullable type.
+- Non-nullable top-level variables & static fiels must always be initilized when declared.
+- Non-nullable class fields must be initialized before the constructer body.
+- Non-nullable optional parameters must be initialized in the parameters list
+- Previous four changes can be omitted if you switch from non-nullable type to a nullable one, obviously.
+
+## Dart Variables :
+
+A Dart variable is a piece of memory that can contain a data value. Variables are typically used to store information which your Dart program needs to do its job. These variables are case sensitive. To declare a variable, write var directly before the variable.
+
+## Types of Dart variables :
+
+There are Four types of varibles :
+
+1.  Top-Level.
+2.  Static.
+3.  Instance.
+4.  Local.
+
+var, const, final, late.
+
+## Dart Built-In Types :
+
+### Numbers
+
+In Numbers there are three types :
+
+1. num
+2. int
+3. double
+
+`int` and `double` are, in facts, numbers, meaning that the methods from inside the `num` class are completely accessible to both `int` and `double` types.
+
+## Parse :
+
+To parse a type we can use like this.
+
+```Dart
+var x = int.parse(a);
+var y = double.parse(b);
+var z = num.parse(c);
+
+// To convert to String
+
+var m = x.toString(a);
+var n = x.toString(b);
+var o = x.toString(c);
+```
+
+## Float Methods :
+
+```Dart
+  double number = 24.6;
+
+// Nearest and Not Smaller than current value
+  print(number.ceil());
+
+// Nearest and Not Bigger than current value
+  print(number.floor());
+
+// Nearest without any other restrictions
+  print(number.round());
+
+Output :
+25
+24
+25
+```
+
+## Truncate :
+
+int `truncate()` Returns the integer obtained by discarding any fractional part of this number. Rounds the number towards zero.
+
+```Dart
+// truncate function
+var number = 20.3;
+print(number.truncate());
+
+// truncate division
+  var a = 10;
+  var b = 5;
+  var c = a ~/ b;
+  print(c);
+
+  Output :
+  2
+```
+
+## String Methods :
+
+Simple concadination
+
+```Dart
+String greetings = 'Happy' ' ' 'Morning';
+
+Output :
+Happy Morning
+```
+
+Plus Concadination
+
+```Dart
+var a = 'Happy';
+var b = ' Morning';
+
+print(a + b);
+
+Output :
+
+Happy Morning
+```
+
+## Paragraph typing :
+
+```Dart
+  var paragraph = """Love is beautiful.
+It is the mysterious force that binds people to those around them.
+It has infinitely many forms, and each of the forms never stays the same for long.
+Love is always evolving, and changing intensity.""";
+  print(paragraph);
+
+Output :
+Love is beautiful.
+It is the mysterious force that binds people to those around them.
+It has infinitely many forms, and each of the forms never stays the same for long.
+Love is always evolving, and changing intensity.
+```
+
+## New Line `\n`:
+
+```Dart
+  var dartProgramming =
+      "Dart \nDart is an object-oriented programming language.";
+  print(dartProgramming);
+
+Output :
+Dart
+Dart is an object-oriented programming language.
+
+// To ignore \n, we can use 'r' infront of the string.
+```
+
+## Unicode in Dart :
+
+```Dart
+print('\u{1F340}');
+
+Output :
+🍀
+```
+
+## Hash Code `#code` :
+
+```Dart
+var name = 'Ruban';
+
+print(name.hashcode);
+
+Output :
+512218410
+```
+
+## Boolean Methods :
+
+In boolean, it writtens only `true` or `false`. And it having an `bool` keyword to declare a variable.
+
+```Dart
+bool a = true;
+
+if (a){
+  print('Success');
+}
+
+Output :
+Success
+```
+
+## Lists (Ordered Group of an Object):
+
+A List is simply an ordered group of objects. The `dart:core` library provides the List class that enables creation and manipulation of lists.
+
+### Filled Method :
+
+```Dart
+List<int> list = List.filled(5, 7);
+
+Output :
+[7, 7, 7, 7, 7]
+```
+
+### Empty & Growable :
+
+```Dart
+// Empty
+  List<int> list = List.empty();
+  print(list);
+
+  Output:
+  []
+
+//Growable
+  List<int> list = List.empty(growable: true);
+  list.add(3);
+  print(list);
+
+  Output:
+  [3]
+```
+
+### Generate :
+
+```Dart
+  List<int> list = List.generate(7, (index) => 5);
+  print(list);
+
+  Output :
+  [5, 5, 5, 5, 5, 5, 5]
+```
+
+## Sets :
+
+Sets in Dart is a special case in List where all the inputs are unique i.e it doesn't contain any repeated input. It can also be interpreted as an unordered array with unique inputs. The set comes in play when we want to store unique values in a single variable without considering the order of the inputs.
+
+```Dart
+  var set1 = {1, 2, 3};
+  var set2 = {2, 3, 4};
+
+// Intersection
+  var intersect = set1.intersection(set2);
+  print(intersect);
+
+// Union
+  var union
+
+// Difference
+  var difference = set1.difference(set2);
+  print(difference);
+```
+
+## Dart Functions :
+
+Dart function is a set of codes that together perform a specific task. It is used to break the large code into smaller modules and reuse it when needed. Functions make the program more readable and easy to debug. It improves the modular approach and enhances the code reusability.
+
+```Dart
+void main(List<String> args) {
+var name = ['ruban', 'nirmal', 'manoj', 'sanjay', 'teju'].map(applyUpperCase);
+print(name);
+}
+
+String applyUpperCase(String s) {
+return s.toUpperCase();
+}
+```
+
+## Parameters :
+
+There are four types of parameters :
+
+1. Required Positional Parameters.
+2. Optional Positional Parameters.
+3. Required Named Parameters.
+4. Optional Named Parameters

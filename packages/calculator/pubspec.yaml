@@ -1,4 +1,4 @@
 name: calculator
 environment:
-  sdk: ">=2.10.0 <3.0.0"
-dependencies: {pedantic: ^1.11.1}
+  sdk: ">=2.18.0 <3.0.0"
+dependencies: { pedantic: ^1.11.1 }
