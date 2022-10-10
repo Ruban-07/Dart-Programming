@@ -698,3 +698,21 @@ There are four types of parameters :
 2. Optional Positional Parameters.
 3. Required Named Parameters.
 4. Optional Named Parameters
+
+## IF
+
+```Dart
+  // Standard way
+  if (a.isEven) {
+    print('$a is Even Number');
+  } else {
+    print('$a is Odd Number');
+  }
+
+  // Shorthand way
+  a.isEven ? print('$a is Even Number') : print('$a is Odd Number');
+```
+
+## For Loop :
+
+ 
